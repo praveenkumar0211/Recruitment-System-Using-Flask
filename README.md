@@ -28,7 +28,7 @@
       <li>Create new  jobs</li>
       <li>View List of People who applied for a Particular Job.</li>
       <li>Select or Reject a Candidate</li>
-      <li>Can download Candidates Resume</li>
+      <li>Can download Candidate Resume</li>
       <li>Update the details</li>
     </ol>
     
