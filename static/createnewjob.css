@@ -1,0 +1,128 @@
+body{
+    display: flex;
+}
+.col-3 {
+    float: left;
+    width: 27.33%;
+    margin: 40px 3%;
+    position: relative;
+  }
+  input[type="text"] {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+  }
+  .formside{
+    
+      display: block;
+      width: 50rem;
+      background-color: #fcfdfd;
+  }
+  .effect-1,
+.effect-2,
+.effect-3 {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+  width: 13.75rem;
+}
+.effect-2 ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #3399ff;
+    transition: 0.4s;
+  }
+  .effect-2:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+  }
+  
+  .effect-3 ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 99;
+  }
+  .effect-3 ~ .focus-border:before,
+  .effect-3 ~ .focus-border:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3399ff;
+    transition: 0.4s;
+  }
+  .effect-3 ~ .focus-border:after {
+    left: auto;
+    right: 0;
+  }
+  .effect-3:focus ~ .focus-border:before,
+  .effect-3:focus ~ .focus-border:after {
+    width: 50%;
+    transition: 0.4s;
+  }
+  .sign{
+    margin-top: 3rem;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    margin-left: -6rem;
+    font-size: .7rem;
+    width: 8rem;
+    height: 2.5rem;
+    border: 2px solid rgb(2, 2, 2);
+    box-shadow: inset 0 0 0 0 rgb(68, 68, 68);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    font-weight: 700;
+  }
+  .sign:hover{
+    box-shadow: inset 400px 0 0 0 rgb(255, 255, 255);
+    color: #000000;
+    font-weight: 700;
+  }
+  .another{
+    background-color: rgb(26, 90, 228);
+    width: 50rem;
+    height: 50rem;
+  }
+  .another h3{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+  }
+  #albert{
+    margin-left: 20rem;
+    font-size: 1.2rem;
+    margin-top: -1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+  }
+ .another p{
+    font-size: 1rem;
+    color: rgb(250, 250, 250);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    width: 45rem;
+    margin-left: 2rem;
+    line-height: 1.4rem;
+  }
+  .another ul li{
+    font-size: 1rem;
+    color: rgb(250, 250, 250);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    width: 45rem;
+    margin-left: 1rem;
+    line-height: 1.4rem;
+  }

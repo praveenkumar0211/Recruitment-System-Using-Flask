@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='companysignup.css') }}">
+    </head>
+    <body>
+        <div class="intro">
+            <h3>The help of Technology can help us improve our life</h3>
+                <p>Technology has changed the entire recruitment and job search process.It’s not uncommon in a large organization to work with colleagues in different cities, states, or even other countries. Technology has made it easier for us to work remotely and it’s also opened the talent pool for recruiters. It’s no longer necessary to stick to local talent — in many cases, recruiters can find talent globally.</p>
+                <h3>Join the event</h3>
+        </div>
+        <div class="box" style="height:100%">
+            <form action="/update" method="POST">
+            <div class="left">
+                
+                <div class="col-3">
+                    <p>Company Name</p>
+                    <input class="effect-1" type="text" placeholder="Name" name="name" id="name" value="{{g.user.Name}}" style="width: 15rem;">
+                    <span class="focus-border"></span>
+                </div>
+            </div>
+            <br>
+            <div class="email" style="margin-top: -1rem;">
+                <p>Email</p>
+                <input class="effect-1" type="text" placeholder="Email" name="email" id="email" value="{{g.user.Email_id}}" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="col-3" style="margin-top: -1rem;">
+                <p>Password</p>
+                <input class="effect-1" type="text" placeholder="Password" name="password" id="password" value="{{g.user.Password}}" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-3" style="margin-top: -1rem;">
+                <p>Contact</p>
+                <input class="effect-1" type="text" placeholder="Contact" name="contact" id="contact" value="{{g.user.Contact}}" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-3" style="margin-top: -1rem;">
+                <p>Address</p>
+                <input class="effect-1" type="text" placeholder="Address" name="address" id="address" value="{{g.user.Address}}" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-3" style="margin-top: -1rem;">
+                <p>Domain</p>
+                <input class="effect-1" type="text" placeholder="Domain" name="domain" id="address" value="{{g.user.Domains}}" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="submit" class="sign">Update Details</button>
+            </div>
+            </form>
+        </div>
+    </body>
+</html>

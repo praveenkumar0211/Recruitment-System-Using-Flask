@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='createnewjob.css')}}">
+    </head>
+    <body>
+        <div class="formside">
+            <form style="display: block;" action="/createjob" method="POST">
+                <div class="col-3">
+                    <p style="margin-left: -1rem;">Job Name:</p>
+                    <input class="effect-3" type="text" name="name" id="name" placeholder="Name of the job" required>
+                    <span class="focus-border"></span>
+                </div>
+                <input type="hidden" value="{{g.user.Name}}" name="companyname" id="companyname">
+                <div class="col-3">
+                    <p style="margin-left: -1rem;"> Last Date to apply:</p>
+                    <input class="effect-3" type="date" name="date" id="date" required>
+                    <span class="focus-border"></span>
+                </div><br><br><br><br><br>
+                <div class="col-3" style="margin-left: -31.9rem;"><br><br>
+                    <p style="margin-left: 3rem;">Role:</p>
+                    <select class="effect-2" name="role" id="role" required style="margin-left: 4rem; width: 12rem;">
+                        <option value="">Please choose an option</option>
+                        <option value="intern">Intern</option>
+                        <option value="full">Full Time</option>
+                        <option value="part">Part Time</option>
+                    </select>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="col-3" style="margin-left: -15.7rem;"><br><br>
+                    <p style="margin-left: 1rem;">Experience:</p>
+                    <input class="effect-3" type="text" placeholder="in Years" name="exp" id="exp" required style="margin-left: 2rem;">
+                    <span class="focus-border"></span>
+                </div><br><br><br><br><br><br><br><br><br>
+                <div class="col-3">
+                    <p>Salary:</p>
+                    <input class="effect-2" type="text" placeholder="in Rupees" name="sal" id="sal" required>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="col-3" style="margin-left: .7rem;">
+                    <p style="margin-left: 0rem;">Skills:</p>
+                    <input class="effect-3" type="text" placeholder="Skills" name="skill" id="skill" required style="margin-left: 2rem;">
+                    <span class="focus-border"></span>
+                </div>
+                <div class="col-3" style="margin-left: 18rem;">
+                    <button type="submit" class="sign">Create Job</button>
+                </div>
+           
+        </div>  
+        <div class="another">
+            <h3><i>In the middle of difficulty lies opportunity.
+            </i></h3>
+            <p id="albert"> — Albert Einstein</p>
+            <p>India is looking forward, more than IT and outsourcing. There are countless opportunities across sectors. India is quickly upgrading up its infrastructure in order to maintain its growth. The manufacturing industry is also increasing fast, with world-class companies   </p>
+            <p>The IT sector has emerged as the pillar of modern India. The sector that contributed less than 5% to the country’s GDP until 10 years ago, today contributes twice as much. It has generated approximately 4 million jobs and facilitated nearly 10 million indirect employments.</p>
+            <p>Top sectors of India towards employment growth
+            </p>
+            <ul>
+                <li>Digital Innovation Sectors</li>
+                <li>Food Industry</li>
+                <li>Tourism Industry</li>
+                <li>Education & Training</li>
+                <li>Retail Industry</li>
+                
+            </ul>
+        </div>
+            </form>
+        
+
+    </body>
+</html>

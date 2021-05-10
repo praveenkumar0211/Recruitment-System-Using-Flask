@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='jobcreatecss.css')}}">    
+    </head>
+    <body style="background-color: darkblue;">
+       
+    <section>
+            <div class="intro">
+                <div class="row">
+                    <p>Company Name:</p>
+                    <p style="margin-left: 2.3rem;">{{g.user.Name}}</p>
+                </div>
+                <div class="row">
+                    <p style="margin-left: 4.9rem;">EmailId:</p>
+                    <p style="margin-left: 2.0rem;">{{g.user.Email_id}}</p>
+                </div>
+                <div class="row">
+                    <p style="margin-left: 2.3rem;">Contact No:</p>
+                    <p style="margin-left: 2.8rem;">{{g.user.Contact}}</p>
+                </div>
+            </div>
+            <div class="right">
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <div class="icons">
+                    
+                    <div class="logout" style="margin-left: -3rem;"><a href="logout"> <button class="sign1">Logout</button> </a></div>
+                    <div class="logout"><a href="update"> <button class="sign1">Update Bio</button> </a></div>
+                    <div class="logout"><button class="sign1" id="issue">Raise a issue</button></div>
+                </div>
+            </div>
+        </section>
+        <div class="create">
+            <div class="left">
+                <h3>
+                    Looking to Create New Opportunity?...  
+                </h3><br>
+                <p>Here you go..</p>
+            </div>
+            <div class="but">
+                <a href="/createjob"> <button class="sign1" style="margin-left: 20rem;">Create</button> </a>
+            </div>
+        </div>
+        {%for job in jobs%}
+        <div class="job">
+            <br><br><br>
+           <div class="box">
+            <div class="row">
+               <p>Job:</p><h3>{{job.job_name}}</h3>
+            </div>
+            <div class="row">
+                <p>Position:</p><h3>{{job.job_role}}</h3>
+             </div>
+            <div class="row">
+                <p>Experience:</p><h3>{{job.experience}}</h3>
+            </div>
+            <a href='/seeapplicants/{{job.id}}'><button class="accordion" >View Details</button></a>
+           </div>
+           <br><br><br>
+        </div>
+        {%endfor%}
+        <div class="popup3">
+            <div class="ticket">
+                <img src="{{url_for('static', filename='ccc.png')}}" alt="Close" class="cclose">
+                <p>If you have any issues enter here:</p>
+                <textarea id="review" name="review" rows="4" cols="50">
+                  
+                    </textarea>
+                <p>Issues raised here will be handles by our team and you will be notified through mail</p>
+                <button class="sign1" style="margin-left: 9rem;"> Submit</button>
+            </div>
+        </div>
+        <script>
+           
+            document.getElementById("issue").addEventListener("click",function(){
+                document.querySelector(".popup3").style.display="flex";
+            })
+        
+            document.querySelector(".cclose").addEventListener("click",function(){
+                document.querySelector(".popup3").style.display="none";
+            })
+        </script>
+        <!--<script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+            </script>-->
+    </body>
+</html>

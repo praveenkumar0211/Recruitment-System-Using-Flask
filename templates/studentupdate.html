@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='studentupdate.css') }}">
+       
+    </head>
+    <body >
+      
+      <div class="side">
+        
+
+      </div>
+      <div class="side1">
+        
+      </div>
+        <div class="firstsection">
+            <br>
+            <br>
+            <br>
+            <br>
+            <form action="/update" method="POST" enctype="multipart/form-data">
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Name" name="fname" id='fname' value="{{g.user.Name}}" required />
+                <label for="fname" class="form__label">Name</label>
+              </div>
+              
+              <br>
+              <br>
+              <br>
+              <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Name" name="email" id='email' value="{{g.user.Email_id}}" required />
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <div name="exists" id="exists"></div>
+              <br>
+              <br>
+              <br>
+              <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Name" name="password" id='password' value="{{g.user.Password}}" required />
+                <label for="password" class="form__label">Password</label>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Name" name="contact" id='contact' value="{{g.user.Contact}}" required />
+                <label for="contact" class="form__label">Contact Number</label>
+              </div>
+            <br>
+            <br>
+            <br>
+            <div class="form__group field" >
+                <input type="input" class="form__field" placeholder="Name" name="address" id='address' value="{{g.user.Address}}" required />
+                <label for="address" class="form__label">Address</label>
+              </div>
+        </div>
+        <div class="line">
+
+        </div>
+        <div class="secondsection">
+        <br>
+              <br>
+              <br>
+              <br>
+              <div class="form__group field" style="margin-left: 4rem;">
+                <input type="input" class="form__field" placeholder="Name" name="clg" id='clg' value="{{g.user.College}}" required />
+                <label for="clg" class="form__label">College Name</label>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="form__group field" style="margin-left: 4rem;">
+                <input type="input" class="form__field" placeholder="Name" name="degree" id='degree' value="{{g.user.Education}}" required />
+                <label for="degree" class="form__label">Degree</label>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="form__group field" style="margin-left: 4rem;">
+                <input type="input" class="form__field" placeholder="Name" name="spec" id='spec' value="{{g.user.Specialization}}" required />
+                <label for="spec" class="form__label">Specialisation</label>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="form__group field" style="margin-left: 4rem;">
+                <input type="input" class="form__field" placeholder="Name" name="cgpa" id='cgpa' value="{{g.user.CGPA}}" required />
+                <label for="cgpa" class="form__label">CGPA</label>
+              </div>
+          <button type="submit" class="sign">Update Details</button>
+        </form>
+        </div>
+    </body>
+</html>

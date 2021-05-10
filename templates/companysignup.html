@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='companysignup.css') }}">
+    </head>
+    <body>
+        <div class="intro">
+            <h3><i>Time spent on hiring is time well spent.</i></h3>
+            <p id="quote">-Robert Half, Founder Robert Half International</p>
+            <br>
+            <p>Connect with largest pool of candidates in lesser time</p>
+            <ul>
+                <li>70%+ candidates with 2+ years of experience.</li>
+                <li>  1.2 lakh+ Engineering Graduates of Top Engineering Colleges such as IITs and NITs/RECs.</li>
+                    <li>  40 thousand+ Alumni of Top MBA Colleges such as IIMs, XLRI, MDI Gurgaon, et</li>
+            </ul>    
+            <br>
+            <p>Target Your Jobs To Only Right
+                Candidates With TimesJobs' Stringent Job Matching Technology</p>
+                <ul>
+                    <li>60 days of visibility for every job advertised</li>
+                    <li>Relevant and quality responses against job</li>
+                </ul>
+        </div>
+        <div class="box" style="height:100%">
+            <form action="/companysignup" method="POST">
+            <div class="left">
+                
+                <div class="col-3">
+                    <p>Company Name</p>
+                    <input class="effect-1" type="text" placeholder="Name" name="name" id="name" style="width: 15rem;">
+                    <span class="focus-border"></span>
+                </div>
+            </div>
+            <br>
+            <div class="email" style="margin-top: -1rem;">
+                <p>Email</p>
+                <input class="effect-1" type="text" placeholder="Email" name="email" id="email" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="col-3" style="margin-top: -1rem;">
+                <p>Password</p>
+                <input class="effect-1" type="text" placeholder="Password" name="password" id="password" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-3" style="margin-top: -1rem;">
+                <p>Contact</p>
+                <input class="effect-1" type="text" placeholder="Contact" name="contact" id="contact" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-3" style="margin-top: -1rem;">
+                <p>Address</p>
+                <input class="effect-1" type="text" placeholder="Address" name="address" id="address" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-3" style="margin-top: -1rem;">
+                <p>Domain</p>
+                <input class="effect-1" type="text" placeholder="Domain" name="domain" id="address" style="width: 15rem;">
+                <span class="focus-border"></span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="submit" class="sign">Signup as Employer</button>
+            </div>
+            </form>
+        </div>
+    </body>
+</html>

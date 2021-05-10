@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='viewqueries.css')}}">
+    </head>
+    <body>
+        <div class="intro">
+            The users have raised the following queries.
+        </div>
+        <div style="width:100%;margin-left:80rem;"><a href="logout"> <button class="sign1">Logout</button> </a></div>
+        <br><br><br>
+        <table>
+            <tr style="color: black;">
+              <th>Username</th>
+              <th>Issue</th>
+              <th>Solve</th>
+            </tr>
+            {%for query in queries%}
+            <tr>
+              <td>{{query.username}}</td>
+              <td>{{query.issue}}</td>
+              <td><a href='resolve/{{query.id}}'><button class="sign1">Resolve</button></a></td>
+            </tr>
+            {%endfor%}
+          </table>
+    </body>
+</html>

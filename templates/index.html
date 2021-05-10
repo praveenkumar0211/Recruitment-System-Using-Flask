@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Home</title>
+        
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+</script>
+<link rel="stylesheet" href="{{url_for('static', filename='homepage.css')}}">
+         
+    </head>
+    <body>
+      
+      <div id="particles-js">
+      
+      <script src="{{url_for('static', filename='particles.js')}}"></script>
+      <script src="{{url_for('static', filename='app.js')}}"></script>
+      
+        
+        <div class="intro">
+            <h1>Change your life <br>with <span>Recruitment System</span></h1>
+           
+            <p>Efficient and Fast Employment search portal for Engineers.<br>
+            Login to Today to have bright future !!!</p>
+            <div class="sub">
+            <div class="button-container-1">
+                <span class="mas">Login</span>
+              <button id='work' type="button" name="Hover" onclick="/login"><a href="/login">Login<a></button>
+            </div>
+          
+            <div class="button-container-2">
+              <span class="mas">Signup as Student</span>
+            <button type="button" name="Hover" onclick="/studentsignup"><a href="/studentsignup">Signup as Student</a></button>
+          </div>
+          
+          <div class="button-container-3">
+            <span class="mas">Signup as Recruiter</span>
+          <button type="button" name="Hover"><a href="/companysignup">Signup as Recruiter</a></button>
+          </div> 
+        </div>   
+        </div>
+      </div>
+    </div>
+    
+      <div class="about">
+        <div class="aa">
+        <div class="left">
+          <h4>Some Of Our Standlone Features:</h4>
+          <br>
+          
+          <ul>
+            <li>200+ Recruitment companies</li>
+            <li>Easy to use and userfriendly UI</li>
+            <li>Makes the job of HR a lot more easiler</li>
+            <li>Great pool of oppotunity in one place.</li>
+          </ul>
+        </div>
+        <div class="right">
+          <img src="static/6308.jpg">
+
+        </div>
+      </div>
+    </div>
+    <div class="client-area">
+      <div class="client-container">
+          <h2>Our <span>Clients</span></h2>
+          <section class="logo-area slider">
+              <div class="slide"><img src="../static/1.PNG" alt=""></div>
+              <div class="slide"><img src="../static/2.PNG" alt=""></div>
+              <div class="slide"><img src="../static/3.PNG" alt=""></div>
+              <div class="slide"><img src="../static/4.PNG" alt=""></div>
+              <div class="slide"><img src="../static/5.PNG" alt=""></div>
+              <div class="slide"><img src="../static/6.PNG" alt=""></div>
+              <div class="slide"><img src="../static/8.PNG" alt=""></div>
+              <div class="slide"><img src="../static/88.PNG" alt=""></div>
+              <div class="slide"><img src="../static/99.PNG" alt=""></div>
+              <div class="slide"><img src="../static/10.PNG" alt=""></div>
+              <div class="slide"><img src="../static/11.PNG" alt=""></div>
+          </section>
+      </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.logo-area').slick({
+slidesToShow:4,
+slidesToScroll:1,
+autoplay:true,
+autoplaySpeed:1500,
+arrows:false,
+dots:false,
+pauseOnHover:false,
+responsive: [{
+    breakpoint:768,
+    settings:{
+        slidesToShow:4
+    }
+},{
+    breakpoint:520,
+    settings:{
+        slidesToShow:3
+    }
+}]
+    });
+})
+</script>
+        
+
+        
+    </body>
+   
+</html>

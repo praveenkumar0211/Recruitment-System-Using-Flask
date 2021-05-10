@@ -1,0 +1,306 @@
+.logo{
+    margin-left: 3rem;
+    margin-top: 5rem;
+    z-index: 10000;
+}
+.logo img{
+    width: 15%;
+    height: 30%;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    z-index: 10000;
+}
+.intro{
+    margin-left: 2rem;
+    margin-top: -25rem;
+    color: rgb(255, 254, 254);
+    z-index: 10000;
+    
+}
+.intro p{
+  font-family: cursive;
+}
+.sub{
+    display: flex;
+}
+.main{
+  margin-top: -5rem;
+  height: 100vh;
+}
+
+
+
+.button-container-1 {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    margin-top: 6vh;
+    overflow: hidden;
+    border: 1px solid;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+  .button-container-1 button {
+    width: 101%;
+    height: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: #000;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(22) forwards;
+    animation: ani2 0.7s steps(22) forwards;
+  }
+  .button-container-1 button:hover {
+    -webkit-animation: ani 0.7s steps(22) forwards;
+    animation: ani 0.7s steps(22) forwards;
+  }
+  
+  .button-container-2 {
+    position: relative;
+    width: 130px;
+    height: 40px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 6vh;
+    overflow: hidden;
+    border: 1px solid #000;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+  .button-container-2 button {
+    width: 101%;
+    height: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: #000;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    -webkit-mask-size: 3000% 100%;
+    mask-size: 3000% 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(29) forwards;
+    animation: ani2 0.7s steps(29) forwards;
+  }
+  .button-container-2 button:hover {
+    -webkit-animation: ani 0.7s steps(29) forwards;
+    animation: ani 0.7s steps(29) forwards;
+  }
+  
+  .mas {
+    position: absolute;
+    color: rgb(247, 240, 240);
+    text-align: center;
+    width: 101%;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    position: absolute;
+    font-size: 11px;
+    margin-top: 17px;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  @-webkit-keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
+  @keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
+  @-webkit-keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  @keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  a {
+    color: #ffffff;
+  }
+  
+  .button-container-3 {
+    position: relative;
+    width: 135px;
+    height: 40px;
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: 6vh;
+    overflow: hidden;
+    border: 1px solid #000;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+  .button-container-3 button {
+    width: 101%;
+    height: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: #000;
+    -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+    -webkit-mask-size: 7100% 100%;
+    mask-size: 7100% 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(70) forwards;
+    animation: ani2 0.7s steps(70) forwards;
+  }
+  .button-container-3 button:hover {
+    -webkit-animation: ani 0.7s steps(70) forwards;
+    animation: ani 0.7s steps(70) forwards;
+  }
+  .about{
+    display: flex;
+    background-color: #3368ca;
+    height: 25rem;
+    margin-top: 0rem;
+  }
+  .about .aa{
+    margin-top: 2.5rem;
+    display: flex;
+    background-color: rgb(248, 246, 242);
+    height: 20rem;
+    width: 80%;
+    margin-left: 10rem;
+    
+  }
+  .about .aa .left{
+    margin-left: 8rem;
+    font-size: 1rem;
+    width: 20rem;
+  }
+  .about .aa .left h4{
+    width: 24rem;
+    margin-top: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+  }
+  .about .aa .left ul li{
+    font-size: 1.1rem;
+    width: 24rem;
+    line-height: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .about .aa .right{
+    margin-left: 20rem;
+  }
+  .about .aa .right img{
+  width: 90%;
+  height: 80%;
+  margin-top: 2rem;
+  }
+  .clients{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(245, 248, 248);
+  }
+  #particles-js {
+    
+    width: 100%;
+    height: 95vh;
+    background-color: #0063c0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .client-area h2{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0 0 30px;
+    font-family: lato;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 28px;
+}
+.client-area h2 span{
+    color: #ff6600;
+}
+.client-area{
+    padding: 20px 0 0;
+    
+}
+.slick-slide{
+    margin: 0 10px;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus{
+outline: none;
+}
+.slick-slide{
+    display: none;
+    float: left;
+    height: 20%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.slick-loading .slick-slide{
+    visibility: hidden;
+}

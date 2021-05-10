@@ -1,0 +1,114 @@
+body{
+    display: flex;
+    max-width: 100%;
+}
+
+.side{
+  width: 5rem;
+  height: 100%;
+  background-color: #206af3;
+}
+.side1{
+  width: 100%;
+  height: 4rem;
+  background-color: #206af3;
+}
+
+.firstsection {
+    width: 30rem;
+    margin-left: -90rem;
+}
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+  .line{
+      height: 30rem;
+      width: .2rem;
+      background-color: black;
+      margin-left: -7rem;
+      margin-top: 8rem;
+  }
+  .secondsection{
+      width:30rem ;
+  }
+  .thirdsection {
+      width: 30rem;
+  }
+
+  .sign{
+    margin-top: 2rem;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    margin-left: 4rem;
+    font-size: .7rem;
+    width: 8rem;
+    height: 2.5rem;
+    border: 2px solid rgb(2, 2, 2);
+    box-shadow: inset 0 0 0 0 rgb(68, 68, 68);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    font-weight: 700;
+  }
+  .sign:hover{
+    box-shadow: inset 400px 0 0 0 rgb(255, 255, 255);
+    color: #000000;
+    font-weight: 700;
+  
+  }

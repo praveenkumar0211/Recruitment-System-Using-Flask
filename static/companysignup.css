@@ -1,0 +1,79 @@
+:focus{outline: none;}
+body{
+    display: flex;
+    background-image: url("../static/home1.jpg");
+}
+.col-3{float: left; width: 30%; margin-top: 20px 3%; position: relative;z-index:5;margin-left: 1rem;}
+.email{float: left; width: 30%; margin-top: 20px 3%; position: relative;z-index:5; margin-left: 1rem;} /* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #f2f2f2; width: 100%; box-sizing: border-box; letter-spacing: 1px;background:none;}
+.intro{
+    width: 30rem;
+    margin-left: 1rem;
+    color: #f2f2f2;
+}
+.intro h3{
+    margin-top: 4rem;
+    font-size: 1.8rem;
+    width: 43rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.intro h3:nth-child(1){
+    margin-top: 7rem;
+}
+#quote{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: -1rem;
+    margin-left: 15rem;
+}
+.intro p{
+    width: 30rem;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    line-height: 2rem;
+}
+.intro ul li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.7rem;
+    font-size: 1rem;
+}
+.box {
+    width: 35rem;
+    height: 45rem;
+    background-color: #2063b9;
+    margin-left: 21%;
+    color: #fff;
+}
+.box .left{
+    display: flex;
+}
+
+.effect-1, 
+.effect-2, 
+.effect-3{border: 0; padding: 9px 0; border-bottom: 1px solid #ccc;}
+
+.effect-1 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #0c0c0c; transition: 0.4s;}
+.effect-1:focus ~ .focus-border{width: 143%; transition: 0.4s;}
+
+.sign{
+    margin-top: 0rem;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    margin-left: 14rem;
+    font-size: .7rem;
+    width: 8rem;
+    height: 2.5rem;
+    border: 2px solid rgb(2, 2, 2);
+    box-shadow: inset 0 0 0 0 rgb(68, 68, 68);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    font-weight: 700;
+  }
+  .sign:hover{
+    box-shadow: inset 400px 0 0 0 rgb(255, 255, 255);
+    color: #000000;
+    font-weight: 700;
+  
+  }
+  

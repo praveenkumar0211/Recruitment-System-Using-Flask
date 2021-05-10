@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>LoginPage</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='loginstyle.css') }}">
+        <script src="{{ url_for('static', filename='login.js') }}"></script>
+        
+    </head>
+<body style="background: url({{url_for('static', filename='bg.jpg')}})">
+    
+    <div class ="box">
+        <div class="left">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='symbol.png') }}">
+                <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Recruitment Management</p>
+            </div>
+            <p style="font-family: monospace;font-size:1.2rem;">Welcome back, Please Login..</p>
+            <form action="/login" method="POST">
+            <div class="same">
+                
+                    <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="useremail@abc.com" name="uname" id='uname' required />
+                    <label for="uname" class="form__label" >User-Email</label>
+                    </div>
+            </div>
+            <div class="same">
+                    <div class="form__group field">
+                    <input type="password" class="form__field" placeholder="password" name="passwd" id='passwd' required />
+                    <label for="password" class="form__label">Password</label>
+                    </div>
+            </div>
+            <div>
+                {%if error%}
+                    <h4 style="margin-left: 4.5rem;">{{error}}</h4>
+                {% endif%}
+            </div><br>
+            <button class="but" type="submit">Login</button>
+            </form>
+            <div class="row">
+                <a href="/studentsignup"> <button class="sign">Signup as Student</button> </a>
+                <a href="/companysignup"> <button class="sign">Signup as Recruiter</button> </a>
+            </div>
+           
+        </div>
+        <div class="right">
+            <img src="{{ url_for('static', filename='work.png') }}">
+            
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,264 @@
+<html>
+<head> 
+    <link rel="stylesheet" href="{{url_for('static', filename='jobsearch.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: darkblue;">
+    
+    <section>
+    <div class="intro" id="in">
+        <div class="row">
+            <p>Name:</p>
+            <p style="margin-left: 2.8rem;">{{g.user.Name}}</p>
+        </div>
+        <div class="row">
+            <p style="margin-left: -2.5rem;">Education:</p>
+            <p style="margin-left: 2.5rem;">{{g.user.Degree}} {{g.user.Specialization}}</p>
+        </div>
+        <div class="row">
+            <p style="margin-left: -1.1rem;">EmailId:</p>
+            <p style="margin-left: 2.8rem;">{{g.user.Email_id}}</p>
+        </div>
+        <div class="row">
+            <p style="margin-left: -4rem;">Contact No:</p>
+            <p style="margin-left: 3rem;">{{g.user.Contact}}</p>
+        </div>
+        </div>
+        <div class="icons" style="margin-left: -8rem;">
+            <br><br><br>
+            <div class="logout"><a href="logout"> <button class="sign1">Logout</button> </a></div>
+            <div class="logout"><a href="update"> <button class="sign1">Update Bio</button> </a></div>
+            <div class="raise"><button class="sign1" id="issue">Raise a issue</button></div>
+            <div class="raise1"><a href="status"><button class="sign1" id="status" name="status">My Applications</button></a></div>
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+    <div class="flip">
+        <a href="#" id="button">
+            <div class="front">Filter</div>
+            <div class="back">Filter</div>
+      </a>
+    </div><br>
+    
+    <div><h2 style="color:white;text-align:center">{{msg}}</h2></div>
+    
+    {% for job in jobs %}
+        <div class="job">
+    <div class="box">
+        <div class="left">
+            <div class="same"> <p>Company Name:</p> <h3>{{job.company.Name}}</h3></div>
+            <div class="same"> <p style="margin-left: 3.5rem;">Job Name:</p> <h3 style="margin-left: 1rem;">{{job.job_name}}</h3></div>
+            <div class="same"> <p style="margin-left: 6.0rem;">Role:</p> <h3>{{job.job_role}}</h3></div>
+            <div class="same"> <p style="margin-left: 4.0rem;">Location:</p> <h3>{{job.company.Address}}</h3></div>           
+        </div>
+        <div class="middle">
+            <div class="same"> <p style="margin-left: 2.2rem;">Salary:</p> <h3>{{job.salary}}</h3></div>
+            <div class="same"> <p style="margin-left: 2.7rem;">Skills:</p> <h3 style="margin-left: 1rem;">{{job.skills_required}}</h3></div>
+            <div class="same"> <p style="margin-left: 0rem;">Experience:</p> <h3>{{job.experience}}</h3></div>
+            <div class="same"> <p style="margin-left: 0.9rem;">Last date:</p> <h3>{{job.last_date}}</h3></div>           
+            <div class="same"> <button class="sign1" data-toggle="modal" data-target="#myModal" id="apply" onclick='apply({{job.id}})'>Apply</button> </div>
+            
+        </div>
+    </div>
+    </div>
+    
+
+{%endfor%}
+
+   <div class="nothing">
+    <h3>
+        <br>
+        No more options
+    </h3>
+
+
+
+   </div>
+
+   <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="color: black;">Job conformation</h4>
+          
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form action="apply" method='POST'>
+            <div id='formdiv'></div>
+            <p style="color: black;">Why do we want to select you ??</p>
+            <textarea rows="4" cols="50" id='reas' name='reas' style="margin-left:6rem ; margin-bottom: 2rem;">
+            </textarea>
+            <p id="demo" style="color: black;"></p>
+            <button class="sign1" type="submit" style="margin-left: 14rem;" onclick="myFunction()">Confirm</button>
+        </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            
+            
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+        <!--div class="box">
+            <div class="left">
+               <div class="same"> <p>Company Name:</p> <h3>Google</h3></div>
+               <div class="same"> <p>Domain:</p> <h3>Web Development</h3></div>
+               <div class="same"> <p>Role:</p> <h3>Intern</h3></div>
+               <div class="same"> <p>Location:</p> <h3>Chennai</h3></div>
+            </div>
+            <div class="right">
+                <a href="#"> <button class="sign">Apply</button> </a>
+            </div>
+        </div> -->
+    </div>
+    <div class="popup">
+        <div class="popup-content">
+            <form action="/student" method="POST" >
+            <img src="{{url_for('static', filename='ccc.png')}}" alt="Close" class="close">
+            <p>Choose Your Preference</p>
+            
+            
+            <div class="row">
+                <label for="job">Job:</label><br>
+                <select name="job" id="job" style="margin-top: 6px;">
+                    <option value="">--Please choose an option--</option>
+                    <option value="web">Web Developer</option>
+                    <option value="se">Software Engineer</option>
+                    <option value="app">App Developer</option>
+                    <option value="ai">AI Engineer</option>
+                   
+                </select>
+            </div><br>
+            <br>
+            
+            <div class="row">
+                <label for="location">Location:</label><br>
+                <select name="location" id="location" style="margin-top: 6px;">
+                    <option value="">--Please choose an option--</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="bangalore">Banglore</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="hydrabad">Hydrabad</option>
+                   
+                </select>
+            </div>
+            <br><br>
+            <div class="row">
+                <label for="position">Position:</label><br>
+                <select name="position" id="position" style="margin-top: 6px;">
+                    <option value="">--Please choose an option--</option>
+                    <option value="intern">Intern</option>
+                    <option value="full">Senior Developer</option>
+                    <option value="part">Junior Developer:</option>
+                    
+                   
+                </select>
+            </div>
+            <br><br>
+            <div class="row">
+                <label for="company">Preffered Company:</label><br>
+                <select name="company" id="company" style="margin-top: 6px;">
+                    <option value="">--Please choose an option--</option>
+                    <option value="Google">Google</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Dell">Dell</option>
+                </select>
+            </div>
+            <button type="submit">Submit </button> 
+    </div>
+    </div>
+    </form>
+    
+        <div class="content">
+            <img src="{{url_for('static', filename='ccc.png')}}" alt="Close" class="close">
+            <p>Job applied successfully</p>
+        </div>
+    
+    
+<div class="popup3">
+    <div class="ticket">
+        <img src="{{url_for('static', filename='ccc.png')}}" alt="Close" class="cclose">
+        <p>If you have any issues enter here:</p>
+        <form action="helpquery" method='POST'>
+        <textarea id="review" name="review" rows="4" cols="50"></textarea>
+        <button type="submit" class="sign1" id="issue">Raise a issue</button>
+    </form>
+    <p>Issues raised here will be handled by our team and you will be notified through mail</p>
+    </div>
+</div>
+
+
+    <script>
+        document.getElementById("button").addEventListener("click",function(){
+            document.querySelector(".popup").style.display="flex";
+        })
+    
+        document.querySelector(".close").addEventListener("click",function(){
+            document.querySelector(".popup").style.display="none";
+        })
+        document.getElementById("apply").addEventListener("click",function(){
+            document.querySelector(".content").style.display="flex";
+        })
+    
+        document.querySelector(".cclose").addEventListener("click",function(){
+            document.querySelector(".content").style.display="none";
+        })
+       
+
+        document.getElementById("issue").addEventListener("click",function(){
+            document.querySelector(".popup3").style.display="flex";
+        })
+    
+        document.querySelector(".cclose").addEventListener("click",function(){
+            document.querySelector(".popup3").style.display="none";
+        })
+        var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function apply(a) {
+  document.getElementById("formdiv").innerHTML="<input type='hidden' name='id' id='id' value='"+a+"'>"
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Job applied successfully";
+}
+
+
+
+
+
+    </script>
+</body>
+</html>

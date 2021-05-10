@@ -1,0 +1,207 @@
+section{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    background: "{{url_for('static',filename='cele.jpg')}}";
+    margin-top: 0;
+}
+.intro{
+    width: 100%;
+    align-items: center;
+    background-color: #000000;
+    margin-top: 2.8rem;
+}
+
+.icons{
+  display: flex;
+ 
+}
+.right{
+  background-color: #000000;
+  height: 43.5vh;
+  margin-top: 3rem;
+}
+.logout{
+    display: block;
+    width:100%;
+  }
+  .logout .sign1{
+    margin-top: 0.6rem;
+    margin-left: 2rem;
+    color: #0a0a0a;
+    background-color: #fff;
+    font-size: .7rem;
+    width: 8rem;
+    height: 2.0rem;
+    border: 2px solid rgb(247, 247, 247);
+    box-shadow: inset 0 0 0 0 rgb(226, 217, 217);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    font-weight: 700;
+  }
+  .logout .sign1:hover{
+    box-shadow: inset 400px 0 0 0 rgb(241, 127, 33);
+    background-color: #e46e1f;
+    color: rgb(255, 254, 254);
+    font-weight: 700;
+  
+  }
+  .logout .sign1:nth-child(1){
+    margin-left: 2rem;
+  }
+
+.intro .row{
+    font-size: 1.6rem;
+    display: flex;
+    color: white;
+    text-align: center;
+    align-items: center;
+    margin-left: 4rem;
+}
+.create{
+    display: flex;
+    width: 100%;
+    height: 11rem;
+    background-color: #00369b;
+}
+.create .left{
+    color: white;
+    margin-left: 5rem;
+}
+.create .left h3{
+    color: white;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+}
+.create .left p{
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    margin-top: -1rem;
+}
+
+
+
+
+
+
+
+.sign1{
+    margin-top: 3.5rem;
+    background-color: #000000;
+    color: rgb(247, 247, 247);
+    margin-left: 26rem;
+    font-size: .9rem;
+    width: 9rem;
+    height: 3rem;
+    border: 2px solid rgb(2, 2, 2);
+    box-shadow: inset 0 0 0 0 rgb(68, 68, 68);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    font-weight: 700;
+  }
+  .sign1:hover{
+    box-shadow: inset 400px 0 0 0 rgb(255, 255, 255);
+    color: #000000;
+    font-weight: 700;
+  
+  }
+
+  .job{
+    
+      display: block;
+      width: 100%;
+      background-color:rgb(226, 222, 222);
+      
+  }
+  .box{
+    width:  40rem;
+    background-color: #fff;
+    margin-left: 10rem;
+    height:25vh ;
+    display: block;
+    margin-top: 0rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.job .box:hover{
+    transform: translateY(-3px);
+}
+.job .box .row{
+    display: flex;
+}
+.job .box .row p{
+    margin-left: 1rem;
+    display: flex;
+}
+.job .box .row h3{
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  .job .box:nth-child(1){
+    margin-left: 3rem;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+  body{
+    height: 60rem;
+  }
+
+  .popup3{
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 100000;
+  }
+  
+  .ticket{
+    width: 30rem;
+    height: 25rem;
+    background-color: #1859e6;
+  }
+
+  .cclose{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .ticket p{
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 1rem;
+  }
+
+  #review{
+    margin-left: 3rem;
+  }
